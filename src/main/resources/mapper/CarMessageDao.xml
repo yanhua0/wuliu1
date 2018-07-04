@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--为DAO接口提供sql语句方法-->
+<mapper namespace="org.wuliu.dao.CarMessageDao">
+    <select id="queryAll"  resultType="carMessage">
+        select
+        *from
+       car_message
+       order by issue_date desc
+    </select>
+    <select id="findById"  resultType="carMessage">
+        select
+        *from
+        car_message where code=#{id}
+    </select>
+    <insert id="insert">
+        insert ignore into car_message(licence_number,driver_name,driver_time
+        ,brand,user_time,link_phone,remark,licence_style,carLoad,transpotStyle,trade_mark,style,link_man,user_name)
+        values(#{licenceNumber},#{driverName},#{driverTime}
+        ,#{brand},#{userTime},#{linkPhone},#{remark},#{licenceStyle},#{carLoad},#{transpotStyle},#{tradeMark},#{style}
+        ,#{linkMan},#{userName})
+    </insert>
+    <delete id="delete">
+        delete from car_message where code=#{id}
+    </delete>
+
+    <update id="update">
+        update car_message
+        set licence_number=#{licenceNumber},
+        driver_name=#{driverName},
+        licence_style=#{licenceStyle},
+        carload=#{carload},user_time=#{userTime},
+        driver_time=#{driverTime},
+        trade_mark=#{tradeMark},style=#{style},
+        transpotStyle=#{transpotStyle},link_man=#{linkMan},link_phone=#{linkPhone},
+        remark=#{remark},brand=#{brand}
+        where code=#{code}
+
+    </update>
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--为DAO接口提供sql语句方法-->
+<mapper namespace="org.wuliu.dao.GoodsMegDao">
+    <select id="queryAll"  resultType="goodsMeg">
+         select
+        *from
+        goods_meg
+        order by issue_date desc
+    </select>
+
+    <select id="findById"  resultType="goodsMeg">
+        select
+        *from
+        goods_meg where id=#{id}
+    </select>
+
+        <insert id="insert">
+            insert into goods_meg(goods_style,goods_number,start_province,end_province,style,phone,remark,request,goods_name,goods_unit,start_city,end_city,transport_time,link,user_name)
+            values(#{goodsStyle},#{goodsNumber},#{startProvince},
+            #{endProvince},#{style},#{phone},
+           #{remark},#{request},#{goodsName},
+            #{goodsUnit},#{startCity},#{endCity},
+            #{transportTime},#{link},#{userName});
+        </insert>
+    <delete id="delete">
+        delete from goods_meg where id=#{id}
+    </delete>
+    <update id="update">
+         update goods_meg
+         set
+   goods_style=#{goodsStyle},
+goods_name=#{goodsName},
+goods_number=#{goodsNumber},
+goods_unit=#{goodsUnit},
+start_province=#{startProvince},
+start_city=#{startCity},
+end_province=#{endProvince},
+end_city=#{endCity},
+style=#{style},
+transport_time=#{transportTime},
+phone=#{phone},
+link=#{link},
+remark=#{remark},
+request=#{request}
+where id=#{id}
+    </update>
+</mapper>

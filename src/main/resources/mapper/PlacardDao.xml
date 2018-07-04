@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--为DAO接口提供sql语句方法-->
+<mapper namespace="org.wuliu.dao.PlacardDao">
+    <insert id="insert">insert into placard(title,content,author)
+        values(#{title},#{content},#{author})
+    </insert>
+    <update id="update">
+        update placard
+        set
+        title=#{title},
+        content=#{content},
+        author=#{author}
+        where id=#{id}
+    </update>
+    <delete id="delete">
+        delete from placard where id=#{id}
+    </delete>
+    <select id="findAll"  resultType="placard">
+        select
+        *from
+        placard
+        order by issue_date desc
+    </select>
+    <select id="findById"  resultType="placard">
+        select
+        *from
+        placard where id=#{id}
+    </select>
+</mapper>

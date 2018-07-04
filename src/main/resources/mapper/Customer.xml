@@ -4,6 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--为DAO接口提供sql语句方法-->
 <mapper namespace="org.wuliu.dao.CustomerDao">
+    <delete id="delete">
+        delete from customer where id=#{id}
+    </delete>
     <select id="findByNameAndPassword"  resultType="customer">
         select
         *from
@@ -15,6 +18,13 @@
         *from
        customer where name=#{name}
     </select>
+    <select id="findAll" resultType="org.wuliu.entity.Customer">
+        select *
+        from customer   order by issue_date desc
+    </select>
+    <select id="findById" resultType="org.wuliu.entity.Customer">
+        select *from customer where id=#{id}
+    </select>
     <insert id="insert">
         insert ignore into customer(name,password,sex
     ,phone,email,question,result,pow)
@@ -22,5 +32,18 @@
     </insert>
     <update id="update">
         update customer set password=#{password} where name=#{name}
+    </update>
+    <update id="updateAll">
+       update customer
+       set
+       name=#{name},
+       password=#{password},
+       email=#{email},
+       sex=#{sex},
+       phone=#{phone},
+       question=#{question},
+       result=#{result},
+       pow=#{pow}
+       where id=#{id}
     </update>
 </mapper>

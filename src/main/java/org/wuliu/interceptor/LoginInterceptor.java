@@ -18,7 +18,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         System.out.println("preHandle");
         System.out.println(request.getServletPath());
         HttpSession session = request.getSession();
-       Customer customer= (Customer) session.getAttribute("customer");
+        Customer customer= (Customer) session.getAttribute("customer");
         String url=request.getRequestURI();
         if(url.indexOf("/check")>=0)
         {

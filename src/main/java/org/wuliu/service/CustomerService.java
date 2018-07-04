@@ -1,10 +1,13 @@
 package org.wuliu.service;
 
+import com.github.pagehelper.PageInfo;
 import org.wuliu.entity.Customer;
+import org.wuliu.entity.Knowledge;
 import org.wuliu.utils.Result;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 public interface CustomerService {
     Result findByNameAndPassword(String name, String password, HttpSession session, HttpServletResponse response);
@@ -13,5 +16,10 @@ public interface CustomerService {
     Result findByName(String name,String qu,String res);
     int update(String password,String name);
     Customer findByName(String name);
+    List<Customer> findAll();
+    Customer findById(int id);
+    void delete(int id);
+    Result updateAll(Customer customer,String name);
+    PageInfo<Customer> findpage(Integer page);
 
 }

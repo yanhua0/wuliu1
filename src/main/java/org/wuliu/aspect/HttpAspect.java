@@ -15,9 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class HttpAspect {
 
-    private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
-
-
+    private Logger logger= LoggerFactory.getLogger(this.getClass());
     @Pointcut("execution(public * org.wuliu.web.*.*(..))")
     public void log() {
     }

@@ -18,4 +18,25 @@ public class CustomerServiceTest {
     public void findByNameAndPassword() {
 
     }
+
+    @Test
+    public void findByNameAndPassword1() {
+    }
+
+    @Test
+    public void insert() {
+    }
+
+    @Test
+    public void findByName() {
+        customerService.findByName("1","1","1");
+    }
+
+    @Test
+    public void update() {
+    }
+
+    @Test
+    public void findByName1() {
+    }
 }

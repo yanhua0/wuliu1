@@ -65,7 +65,7 @@
     <td width="125" height="34">发布人：</td>
     <td width="265" height="34"> ${enterprise.userName}</td>
   <input type="hidden"  name="id" value="${enterprise.id}">
-<c:if test="${enterprise.userName.equals(sessionScope.customer.name)}">
+<c:if test="${enterprise.userName.equals(sessionScope.customer.name)||sessionScope.customer.pow.equals('2')}">
 <tr>
     <td width="786" height="45" colspan="4" align="center">                 
       <p><input type="submit" value="修改" name="B1"><input type="reset" value="重写" name="B2">&nbsp;&nbsp;

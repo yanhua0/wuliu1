@@ -1,5 +1,5 @@
 <%@ page import="org.wuliu.entity.Customer" %>
-<%@ page contentType="text/html; charset=gb2312" %>
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html>
@@ -7,7 +7,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
   <link rel="stylesheet" href="/resources/CSS/style.css">
     <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-  <title>Ê×Ò³</title>
+  <title>é¦–é¡µ</title>
         <%
 Customer login=(Customer) session.getAttribute("customer");
 
@@ -18,7 +18,7 @@ if(login==null)
         $(function () {
             if($("#h3").html()=="")
             {
-                alert("Äú»¹Î´µÇÂ¼£¬²»ÄÜä¯ÀÀÏêÏ¸ĞÅÏ¢£¡£¡£¡");
+                alert("æ‚¨è¿˜æœªç™»å½•ï¼Œä¸èƒ½æµè§ˆè¯¦ç»†ä¿¡æ¯ï¼ï¼ï¼");
             }
         })
     </script>
@@ -28,13 +28,13 @@ if(login==null)
       {
           if(form_u.name.value=="")
           {
-              alert("ÇëÌíÈëĞÕÃû");
+              alert("è¯·æ·»å…¥å§“å");
               form_u.name.focus();
               return false;
           }
           if(form_u.password.value=="")
           {
-              alert("ÇëÌíÈëÃÜÂë");
+              alert("è¯·æ·»å…¥å¯†ç ");
               form_u.password.focus();
               return false;
           }
@@ -74,7 +74,7 @@ if(login==null)
            </c:forEach>
               <tr>
                 <td width="36" height="25">&nbsp;</td>
-                <td width="334" align="right"><a href="/goods_select">&nbsp;>>>¸ü¶àĞÅÏ¢&nbsp;&nbsp;&nbsp;</a></td>
+                <td width="334" align="right"><a href="/goods_select">&nbsp;>>>æ›´å¤šä¿¡æ¯&nbsp;&nbsp;&nbsp;</a></td>
               </tr>
             </table>		  		  </td>
         </tr>
@@ -93,7 +93,7 @@ if(login==null)
     </c:forEach>
         <tr>
           <td width="36" height="25">&nbsp;</td>
-          <td width="334" align="right"><a href="/car_select">&nbsp;>>>¸ü¶àĞÅÏ¢&nbsp;&nbsp;&nbsp;</a></td>
+          <td width="334" align="right"><a href="/car_select">&nbsp;>>>æ›´å¤šä¿¡æ¯&nbsp;&nbsp;&nbsp;</a></td>
         </tr>
       </table>
       <table width="100" border="0" cellpadding="0" cellspacing="0">
@@ -111,9 +111,9 @@ if(login==null)
 </c:forEach>
         <tr>
           <td width="36" height="25">&nbsp;</td>
-          <td width="334" align="right"><a href="/enterprise_select">&nbsp;>>>¸ü¶àĞÅÏ¢&nbsp;&nbsp;&nbsp;</a></td>
+          <td width="334" align="right"><a href="/enterprise_select">&nbsp;>>>æ›´å¤šä¿¡æ¯&nbsp;&nbsp;&nbsp;</a></td>
         </tr>
-      </table></td><!--´æ·ÅÖĞ¼äµÄ´úÂë-->
+      </table></td><!--å­˜æ”¾ä¸­é—´çš„ä»£ç -->
     <td valign="top" width="215" background="/resources/image/12.jpg"><jsp:include page="right.jsp" flush="true" /></td>
   </tr>
 </table><jsp:include page="down.jsp" flush="true" />

@@ -75,7 +75,7 @@
 
     <td width="31%" height="42" align="center">${carmessage.userName}</td>
   </tr>
-<c:if test="${carmessage.userName.equals(sessionScope.customer.name)}">
+<c:if test="${carmessage.userName.equals(sessionScope.customer.name)||sessionScope.customer.pow.equals('2')}">
  <tr>
       <td width="100%" height="33" colspan="4" align="center">
         <input type="hidden" name="id" value="${carmessage.code}">

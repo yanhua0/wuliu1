@@ -20,7 +20,7 @@ public class LogisticsController {
     private LogisticsService logisticsService;
     @RequestMapping(value = "/active_select",method = RequestMethod.GET)
     public String findByPage(@RequestParam(value = "page",defaultValue = "1",required = true) Integer page, Model model)
-    {
+    {   logger.info("查询物流动态信息");
         PageInfo<Logistics> p=logisticsService.findpage(page);
         model.addAttribute("page",p);
         return "active_select";

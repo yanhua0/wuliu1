@@ -61,7 +61,7 @@
     </tr>
     <tr>
         <td width="17%" height="31" align="center">发布时间：</td>
-        <td width="36%" height="31" align="left" colspan="3">  <fmt:formatDate value="${goodsMsg.issueDate}"   pattern="yyyy-MM-dd HH:mm:ss" type="date" dateStyle="long" /></td>
+        <td width="36%" height="31" align="left" colspan="3"><fmt:formatDate value="${goodsMsg.issueDate}"   pattern="yyyy-MM-dd HH:mm:ss" type="date" dateStyle="long" /></td>
 
     </tr>
     <tr>
@@ -80,7 +80,7 @@
         <td width="36%" height="31" align="left" colspan="3">${goodsMsg.userName}</td>
 
     </tr>
-<c:if test="${goodsMsg.userName.equals(sessionScope.customer.name)}">
+<c:if test="${goodsMsg.userName.equals(sessionScope.customer.name)||sessionScope.customer.pow.equals('2')}">
     <tr>
         <td width="100%" height="45" colspan="4" align="center">
             <a href="/goods_change?id=${goodsMsg.id}">修改</a>&nbsp;&nbsp;

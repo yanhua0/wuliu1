@@ -15,10 +15,8 @@ import org.wuliu.entity.CarMessage;
 
 import org.wuliu.entity.Enterprise;
 import org.wuliu.entity.GoodsMeg;
-import org.wuliu.service.CarMessageService;
-import org.wuliu.service.CustomerService;
-import org.wuliu.service.EnterpriseService;
-import org.wuliu.service.GoodsMegService;
+import org.wuliu.entity.Placard;
+import org.wuliu.service.*;
 import org.wuliu.utils.Result;
 
 import javax.servlet.http.HttpServletResponse;
@@ -38,15 +36,20 @@ public class IndexController {
     private EnterpriseService enterpriseService;
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private PlacardSerivce placardSerivce;
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String Index(Model model)
     {
         List<GoodsMeg> goodsMeg=goodsMegService.queryAll();
         List<CarMessage> carMessage=carMessageService.queryAll();
         List<Enterprise> enterprise=enterpriseService.queryAll();
+        List<Placard> placard=placardSerivce.findAll();
         model.addAttribute("goodsMeg",goodsMeg);
         model.addAttribute("carMessage",carMessage);
         model.addAttribute("enterprise",enterprise);
+        model.addAttribute("placard",placard);
+        logger.info("首页信息");
         return "index";
     }
     @RequestMapping(value = "/check",method = RequestMethod.POST)

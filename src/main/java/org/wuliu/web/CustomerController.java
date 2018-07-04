@@ -79,4 +79,5 @@ public class CustomerController {
         session.invalidate();
         return "redirect:/index";
     }
+
 }

@@ -20,7 +20,7 @@
           <tr>
             <td><table width="866"  border="0" align="center" cellpadding="0" cellspacing="0" background="/resources/image/4.jpg">
               <tr>
-                <th width="597" height="31" align="center"><a href="/admin/index" class="a1">首页</a>&nbsp;|&nbsp;<a href="/index" class="a1">用户端首页</a>&nbsp;|&nbsp;<a href="/active_select" class="a1">物流动态管理</a>&nbsp;|&nbsp;<a href="/knowledge_select" class="a1">物流知识管理</a>&nbsp;|&nbsp;<a href="/goods_select" class="a1">货物管理</a>&nbsp;|&nbsp;<a href="/car_select" class="a1">车辆管理</a>&nbsp;|&nbsp;<a href="/enterprise_select" class="a1">企业管理</a>&nbsp;|&nbsp;<a href="Manager/index.jsp" class="a1">公告管理</a>&nbsp;|&nbsp;<a href="/logout" class="a1">会员管理</a>&nbsp;|&nbsp;<a href="/logout" class="a1">退出</a>&nbsp;</th>
+                <th width="597" height="31" align="center"><a href="/admin/index" class="a1">首页</a>&nbsp;|&nbsp;<a href="/index" class="a1">用户端首页</a>&nbsp;|&nbsp;<a href="/active_select" class="a1">物流动态管理</a>&nbsp;|&nbsp;<a href="/knowledge_select" class="a1">物流知识管理</a>&nbsp;|&nbsp;<a href="/goods_select" class="a1">货物管理</a>&nbsp;|&nbsp;<a href="/car_select" class="a1">车辆管理</a>&nbsp;|&nbsp;<a href="/enterprise_select" class="a1">企业管理</a>&nbsp;|&nbsp;<a href="/admin/placard_select" class="a1">公告管理</a>&nbsp;|&nbsp;<a href="/admin/member_select" class="a1">会员管理</a>&nbsp;|&nbsp;<a href="/logout" class="a1">退出</a>&nbsp;</th>
               </tr>
             </table></td>
           </tr>

@@ -119,15 +119,21 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Result updateAll(Customer customer,String name) {
+    public Result updateAll(Customer customer,String name,HttpSession session) {
          Customer customer1=findByName(customer.getName());
         Customer customer2=findById(customer.getId());
+       Customer customer3= (Customer) session.getAttribute("customer");
          if(customer1==null||customer2.getName().equals(name))
          {
              customerDao.updateAll(customer);
+             if(customer.getId()!=customer3.getId())
+             {
+                 return new Result(ResultEnum.ADMIN);
+             }
              return new Result(ResultEnum.SUCCESS);
 
          }
+
          logger.error("修改的用户名重复-----------"+customer.getName());
          return  new Result(ResultEnum.FAIL);
     }

@@ -81,7 +81,12 @@
                          console.log("!1111111111111")
                          if (data.code == 0) {
                            window.location.href = "/logout ";
-                         } else {
+                         }
+                         if(data.code==-1)
+                         {
+                             window.location.reload();
+                         }
+                        if(data.code==1){
                                alert("你输入的用户名已被注册！！");
                          }
                      }

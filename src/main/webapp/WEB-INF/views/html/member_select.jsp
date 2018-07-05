@@ -38,7 +38,7 @@
     <td width="14%" height="35" align="center">${customer.question}</td>
     <td width="11%" height="35" align="center">${customer.result}</td>
     <td width="12%" height="35" align="center"><fmt:formatDate value="${customer.issueDate}"   pattern="yyyy-MM-dd HH:mm:ss" type="date" dateStyle="long" /></td>
-    <td height="35" align="center"> <a href="/admin/member_change?id=${customer.id}">修改</a> <a href="/admin/delete?id=${customer.id}">删除</a></td>
+    <td height="35" align="center"> <a href="/admin/member_change?id=${customer.id}">修改</a> <a href="/admin/delete?id=${customer.id}" onclick="if(confirm('确定删除吗?')==false)return false;else{return true}">删除</a></td>
   </tr>
  </c:forEach>
   <tr>

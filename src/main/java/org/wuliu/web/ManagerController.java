@@ -128,7 +128,7 @@ public class ManagerController {
     @ResponseBody
     public Result update(Customer customer,HttpSession session){
         Customer customer1= (Customer) session.getAttribute("customer");
-         Result result1=customerService.updateAll(customer,customer.getName());
+         Result result1=customerService.updateAll(customer,customer.getName(),session);
          return result1;
 //        return "redirect:/admin/member_change?id="+customer.getId();
     }

@@ -19,7 +19,7 @@ public interface CustomerService {
     List<Customer> findAll();
     Customer findById(int id);
     void delete(int id);
-    Result updateAll(Customer customer,String name);
+    Result updateAll(Customer customer,String name,HttpSession session);
     PageInfo<Customer> findpage(Integer page);
 
 }
